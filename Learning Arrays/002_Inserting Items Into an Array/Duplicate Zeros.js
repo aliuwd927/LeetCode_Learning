@@ -26,7 +26,7 @@ var duplicateZeros = function (arr) {
       //Check if next item is 0, if 0, duplicate 0's and shift items to the right
       arr.splice(i, 0, 0);
       //Randomly took a wild guess to and works...
-      i += 1;
+      i++;
     }
   }
   //keep length the same
