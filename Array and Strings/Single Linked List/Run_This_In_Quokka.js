@@ -81,9 +81,7 @@ class List {
     */
 
     let current = this.start;
-    console.log(current);
     let previous = this.start;
-    console.log(previous);
     while (current !== null) {
       if (data === current.data) {
         console.log(data === current.data);
@@ -91,18 +89,22 @@ class List {
         console.log(current.data);
         console.log(current);
         console.log(this.start);
-        console.log(current === this.start);
 
+        console.log(current === this.start);
         if (current === this.start) {
           this.start = current.next;
           return;
         }
         console.log(current);
         console.log(this.end);
+
         console.log(current === this.end);
         if (current === this.end) {
+          console.log(this.end);
           this.end = previous;
+          console.log(previous);
         }
+
         console.log(current.next);
         console.log(previous);
         console.log(this.end);
@@ -113,6 +115,7 @@ class List {
         return;
       }
       console.log(previous);
+      console.log(current);
       previous = current;
       console.log(previous);
       console.log(current);
@@ -127,7 +130,11 @@ const linkedList = new List();
 for (let i = 1; i <= 10; i++) {
   linkedList.add(i);
 }
-// linkedList.deleteNode(1);
-// linkedList.deleteNode(2);
-linkedList.deleteNode(2);
+//Line 83-97 executed.
+//linkedList.deleteNode(1)
+//Line 108-124 executed
+//linkedList.deleteNode(2);
+//Line 102-124 executed
+//linkedList.deleteNode(10);
+
 console.log(linkedList);
